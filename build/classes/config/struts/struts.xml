@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 这里定义一个通用package，为所有package配置通用拦截器 -->
+	<package name="basePackage" namespace="/" extends="struts-default">
+		<!-- 只有package内可见 -->
+		<interceptors>
+			<!-- 定义拦截器 -->
+			<!-- 只声明但未启用 -->
+			<interceptor name="interceptor01" class="com.interceptor.Interceptor01" />
+			<interceptor name="interceptor02" class="com.interceptor.Interceptor02" />
+			<interceptor name="interceptor03" class="com.interceptor.Interceptor03" />
+			<!-- 定义拦截器栈 -->
+			<interceptor-stack name="interceptorStatck">
+				<interceptor-ref name="interceptor02" />
+				<interceptor-ref name="interceptor03" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- <action name="test" class="com.test.TestAction" method="test"> <interceptor-ref 
+			name="interceptorStatck" /> <result name="success">./index.jsp</result> </action> -->
+	</package>
+	<!-- 额外struts模块配置 -->
+	<include file="config/struts/action/test-struts.xml"></include>
+
+
+</struts>

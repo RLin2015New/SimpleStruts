@@ -1,0 +1,16 @@
+#v1.0  2017.06.14
+
+1.一个简单的纯struts项目配置
+struts2从直观上来讲完成的事情是，把前端请求映射到后台处理，并且提供一些约定的回复方式
+
+2.最小依赖包commons-fileupload-1.2.1.jar，commons-io-1.3.2.jar，commons-logging-api-1.1.jar，
+freemarker-2.3.16.jar，javassist-3.7.ga.jar，ognl-3.0.jar，struts2-core-2.2.1.1.jar，xwork-core-2.2.1.1.jar，common-lang-2.3.jar，common-lang3-3.1.jar
+这里的最小依赖包是基于部署测试得的结果，并非最优的sturts2的结果，这个结果可能和采用的sturts2的各个包的版本相关
+
+3.这里完成的配置是，从web.xml中配置struts2，读取struts2的主配置文件struts.xml，并且include各模块的配置文件
+提供了一个最基础的通用package，并为package配置了拦截栈
+提供了一个测试action， ./test/test ，返回index.jsp
+
+4.TODO
+ 解析源码
+ 
