@@ -14,3 +14,9 @@ freemarker-2.3.16.jar，javassist-3.7.ga.jar，ognl-3.0.jar，struts2-core-2.2.1.1.
 4.TODO
  解析源码
  
+ 
+5.注意路径写法
+ struts中的 / 貌似默认指向了WebContent路径下,且这也是默认的路径。所以index.jsp放在这个路径下会被自动读取。
+ 而其他的jsp、js或css路径，最好也是放在该路径。 使用 /jsp/a.jsp,/js/a.jsp.js,/css/a.jsp.css 的写法
+ 这里还会牵扯出一个问题就是jsp中的绝对路径和相对路径。
+ 

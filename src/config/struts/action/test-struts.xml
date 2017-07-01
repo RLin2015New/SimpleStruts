@@ -7,7 +7,7 @@
 	<package name="test" namespace="/test" extends="basePackage">
 		<action name="test" class="com.test.TestAction" method="test">
 			<interceptor-ref name="interceptorStatck" />
-			<result name="success">../index.jsp</result>
+			<result name="success">/index.jsp</result>
 		</action>
 	</package>
 </struts>
